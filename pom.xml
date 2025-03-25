@@ -15,10 +15,12 @@
     <modules>
         <module>_001whitelist-spring-boot-starter</module>
         <module>_099TestProject</module>
+        <module>_002multi-country-code-spring-boot-starter</module>
+        <module>_098TestMutilCountry</module>
     </modules>
 
     <properties>
-        <revision>1.0.0-jdk11-snapshot</revision>
+        <revision>1.0.1-snapshot</revision>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -35,10 +37,34 @@
         <fastjson.version>2.0.49</fastjson.version>
         <aspectjrt.version>1.8.6</aspectjrt.version>
         <aspectjweaver.version>1.8.6</aspectjweaver.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <reflections.version>0.9.12</reflections.version>
+        <guava.version>30.1-jre</guava.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Apache Commons Lang -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <!-- Reflections -->
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${reflections.version}</version>
+            </dependency>
+            <!-- Guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
